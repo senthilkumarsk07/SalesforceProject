@@ -1,3 +1,22 @@
 <template>
-    
+    <lightning-card title="LWC Component" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-input
+                name="firstName"
+                label="First Name"
+                value={firstName}
+                onchange={handleChange}
+            ></lightning-input>
+            <lightning-input
+                name="lastName"
+                label="Last Name"
+                value={lastName}
+                onchange={handleChange}
+            ></lightning-input>
+            <c-child-component text-value={firstName}></c-child-component>
+            <lightning-button label="Click" name="click" variant="base" onclick={handleButton}></lightning-button>
+            <lightning-button label="update" name="click" variant="base" onclick={updateButton}></lightning-button>
+            {studentMailId}
+        </div>
+    </lightning-card>
 </template>
