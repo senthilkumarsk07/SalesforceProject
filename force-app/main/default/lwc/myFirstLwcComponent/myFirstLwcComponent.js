@@ -42,15 +42,6 @@ export default class MyFirstLwcComponent extends LightningElement {
         console.log('wired method with data ::: ', JSON.parse(JSON.stringify(this.record)));
     }*/
 
-    handleChange(event) {
-        const field = event.target.name;
-        if (field === 'firstName') {
-            this.firstName = event.target.value;
-        } else if (field === 'lastName') {
-            this.lastName = event.target.value;
-        }
-    }
-
 
 
     handleButton() {
@@ -64,5 +55,14 @@ export default class MyFirstLwcComponent extends LightningElement {
     updateButton() {
         console.log('date ::: ', JSON.parse(JSON.stringify(this.dateProperty)));
         this.dateProperty.setHours(10);
+    }
+
+    handleChange(event) {
+        const field = event.target.name;
+        if (field === 'firstName') {
+            this.firstName = event.target.value;
+        } else if (field === 'lastName') {
+            this.lastName = event.target.value;
+        }
     }
 }
